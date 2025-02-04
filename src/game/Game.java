@@ -24,13 +24,13 @@ public class Game extends Thread {
     PriorityQueue<Entity> b;
     public Player player;
     private LocalKeyInputHandler keyInputHandler;
-    private final TileMap TILE_MAP = TileMap.MAP_0;
+    private final TileMap TILE_MAP = TileMap.MAP_4;
     private boolean gameInProgress;
 
     public Game() {
 
         entities = new ConcurrentSortedList<>();
-        player = new Player(100, 20, "");
+        player = new Player(TILE_MAP.getSpawnPoint().x, TILE_MAP.getSpawnPoint().y, "");
         entities.add(player);
         entities.addAll(TILE_MAP.getTiles());
 

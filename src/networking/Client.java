@@ -37,6 +37,7 @@ public class Client extends Thread {
     private String username;
     private DatagramSocket socket;
 
+    // TODO: listen for the server to broaadcast its address so that the client knows what it is!
     public Client(InetAddress serverIpAddress, String username) {
         this.username = username;
         try {

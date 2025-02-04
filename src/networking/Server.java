@@ -28,7 +28,7 @@ public class Server extends Thread {
     public boolean gameInProgress;
 
     public static final int PORT = 4999;
-    public static final String ipAddress = "192.168.56.1";
+    public static final String ipAddress = "localhost";//"172.20.10.9";
     private DatagramSocket socket;
     private List<ClientHandler> clients;
     private PacketListener packetListener;

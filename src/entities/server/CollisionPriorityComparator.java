@@ -13,10 +13,11 @@ public class CollisionPriorityComparator implements Comparator<ServerEntity> {
 
     @Override
     public int compare(ServerEntity e1, ServerEntity e2) {
-        return (entity.hitbox.x - e1.hitbox.x) * (entity.hitbox.x - e1.hitbox.x)
-        + (entity.hitbox.y - e1.hitbox.y) * (entity.hitbox.y - e1.hitbox.y)
-        - (entity.hitbox.x - e2.hitbox.x) * (entity.hitbox.x - e2.hitbox.x)
-        - (entity.hitbox.y - e2.hitbox.y) * (entity.hitbox.y - e2.hitbox.y);
+        return 
+          (int) (entity.hitbox.getCenterX() - e1.hitbox.getCenterX()) * (int) (entity.hitbox.getCenterX() - e1.hitbox.getCenterX())
+        + (int) (entity.hitbox.getCenterY() - e1.hitbox.getCenterY()) * (int) (entity.hitbox.getCenterY() - e1.hitbox.getCenterY())
+        - (int) (entity.hitbox.getCenterX() - e2.hitbox.getCenterX()) * (int) (entity.hitbox.getCenterX() - e2.hitbox.getCenterX())
+        - (int) (entity.hitbox.getCenterY() - e2.hitbox.getCenterY()) * (int) (entity.hitbox.getCenterY() - e2.hitbox.getCenterY());
     }
 
     

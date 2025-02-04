@@ -13,7 +13,7 @@ import utils.ConcurrentSortedList;
 
 public class GamePanel extends JPanel {
 
-    private static final Dimension PREFERRED_SIZE = new Dimension(600, 400);
+    private static final Dimension PREFERRED_SIZE = new Dimension(1000, 1000);
     private ConcurrentSortedList<? extends Entity> entities;
     private Camera camera;
     private long lastTime;

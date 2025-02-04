@@ -155,5 +155,63 @@ public class TileMap {
         return tileMap;
     };
     public static TileMap MAP_3 = MAP_3();
+
+    private static TileMap MAP_4() {
+        TileMap tilemap = new TileMap(1, 3);
+
+        // border
+        for (int i = 0; i <= 50; i ++) {
+            tilemap.add(i, 0, new Obstacle());
+            tilemap.add(i, 10, new Obstacle());
+        }
+        for (int i = 1; i < 10; i ++) {
+            tilemap.add(0, i, new Obstacle());
+            tilemap.add(50, i, new Obstacle());
+        }
+        
+        tilemap.add(4, 1, new Obstacle());
+        tilemap.add(4, 2, new Obstacle());
+        tilemap.add(4, 3, new Obstacle());
+        tilemap.add(4, 4, new Obstacle());
+        tilemap.add(3, 2, new Platform());
+        tilemap.add(3, 1, new Obstacle());
+        tilemap.add(3, 2, new Obstacle());
+        tilemap.add(3, 3, new Obstacle());
+        tilemap.add(3, 4, new Obstacle());
+        tilemap.add(2, 2, new Platform());
+
+        tilemap.add(5, 1, new DangerousObstacle());
+        tilemap.add(6, 1, new DangerousObstacle());
+        tilemap.add(7, 1, new DangerousObstacle());
+        tilemap.add(8, 1, new DangerousObstacle());
+        tilemap.add(9, 1, new DangerousObstacle());
+        tilemap.add(10, 1, new DangerousObstacle());
+        tilemap.add(11, 1, new DangerousObstacle());
+        tilemap.add(12, 1, new DangerousObstacle());
+        tilemap.add(13, 1, new DangerousObstacle());
+        tilemap.add(14, 1, new DangerousObstacle());
+        tilemap.add(15, 1, new DangerousObstacle());
+        tilemap.add(16, 1, new DangerousObstacle());
+        tilemap.add(17, 1, new DangerousObstacle());
+        
+        tilemap.add(18, 1, new Wall());
+        tilemap.add(18, 2, new Wall());
+        tilemap.add(18, 3, new Wall());
+        tilemap.add(18, 4, new Wall());
+        tilemap.add(18, 5, new Wall());
+        tilemap.add(18, 6, new Wall());
+
+        tilemap.add(23, 7, new Platform());
+        tilemap.add(28, 9, new Wall());
+        tilemap.add(28, 8, new Wall());
+        tilemap.add(28, 7, new Wall());
+        tilemap.add(28, 6, new Wall());
+
+        tilemap.add(49, 1, new End());
+        
+        return tilemap;
+    }
+
+    public static TileMap MAP_4 = MAP_4();
    
 }

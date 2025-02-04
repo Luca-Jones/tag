@@ -11,8 +11,8 @@ public class SpriteStore {
     private static final Map<String, Sprite> SPRITE_MAP = new HashMap<>();
 
     private SpriteStore() {
-        SPRITE_MAP.put("IDLE_LEFT", new Sprite("IDLE_LEFT", Color.BLUE, 32, 32));
-        SPRITE_MAP.put("IT", new Sprite("IT", Color.RED, 32, 32));
+        SPRITE_MAP.put("IDLE_LEFT", new Sprite("IDLE_LEFT", Color.BLUE, 20, 20));
+        SPRITE_MAP.put("IT", new Sprite("IT", Color.RED, 20, 20));
         SPRITE_MAP.put("OBSTACLE", new Sprite("OBSTACLE", Color.GRAY, 50, 50));
         SPRITE_MAP.put("DANGEROUS_OBSTACLE", new Sprite("DANGEROUS_OBSTACLE", Color.RED, 50, 50));
         SPRITE_MAP.put("WALL", new Sprite("WALL", Color.DARK_GRAY, 50, 50));

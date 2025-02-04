@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 import entities.tiles.DangerousObstacle;
+import entities.tiles.End;
 import entities.tiles.Obstacle;
 import entities.tiles.Platform;
 import entities.tiles.Wall;
@@ -20,10 +21,10 @@ public class Player extends MoveableEntity {
     protected static final int GRAVITY = 150;
     protected static final int COYOTE_TIMEOUT = 30;
 
-    private static final Dimension REGULAR_HITBOX = new Dimension(32, 32);
+    private static final Dimension REGULAR_HITBOX = new Dimension(20, 20);
 
-    public final int SPEED_STAT = 200;
-    public final int JUMP_STAT = 180;
+    public final int SPEED_STAT = 150;
+    public final int JUMP_STAT = 190;
 
     protected Direction wall;
     protected Direction direction;
@@ -225,7 +226,7 @@ public class Player extends MoveableEntity {
         }
 
         accelerationY = (isClimbing) ? 0 : GRAVITY;
-        velocityY = (isClimbing) ? 60 : velocityY;
+        velocityY = (isClimbing) ? 30 : velocityY;
         frictionCoefficient = (isGrounded) ? FRICTION_COEFFICIENT : DRAG_COEFFICIENT;
 
         isClimbing = false;
@@ -251,7 +252,7 @@ public class Player extends MoveableEntity {
             }
         }
 
-        if (entity instanceof DangerousObstacle) {
+        if (entity instanceof DangerousObstacle || entity instanceof End) {
             respawn();
         }
         
